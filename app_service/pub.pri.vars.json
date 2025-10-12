@@ -1,0 +1,8 @@
+{
+  "location": "location_primary",
+  "environment": "env_abbrev_public",
+  "region": "region_abbrev_primary",
+  "architecture": "architecture",
+  "storage_account_sas_expiry": "global_key_vault_secret_expiration",
+  "application_cidrs": "cidrs_pub_exappsvc_primary"
+}
