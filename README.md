@@ -17,9 +17,7 @@ This project provisions a **secure, production-ready Azure Front Door Premium** 
 
 ##  Architecture
 
-![Architecture Diagram](./diagrams/afd-appservice-architecture.png)  
-*Placeholder — export a diagram from draw.io or Lucidchart showing: Client → Azure Front Door (WAF) → Private Link → App Service → VNet/DNS.*
-
+![Architecture Diagram](./images/diagram.png) 
 ---
 
 ##  How It Works
@@ -28,23 +26,3 @@ This project provisions a **secure, production-ready Azure Front Door Premium** 
 3. Front Door forwards **approved traffic** to App Services via **Private Endpoint**.  
 4. **Private DNS Zone** resolves the App Service’s private FQDN, ensuring no public IP path is used.  
 5. **Terraform** modules manage the entire lifecycle, enabling reproducible deployments across environments.  
-
----
-
-##  Deployment
-
-Clone the repo and deploy with Terraform:
-
-```bash
-# 1. Clone repo
-git clone https://github.com/<your-username>/azure-front-door-appservice-terraform.git
-cd azure-front-door-appservice-terraform
-
-# 2. Initialize Terraform
-terraform init
-
-# 3. Plan infrastructure
-terraform plan -var-file="envs/dev/terraform.tfvars"
-
-# 4. Apply changes
-terraform apply -var-file="envs/dev/terraform.tfvars"
